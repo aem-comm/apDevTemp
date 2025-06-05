@@ -226,18 +226,6 @@
       },
       {
         "component": "boolean",
-        "name": "hide-heading",
-        "label": "Hide Heading",
-        "description": "Hide the heading of the cart"
-      },
-      {
-        "component": "boolean",
-        "name": "hide-attributes",
-        "label": "Hide Attributes",
-        "description": "Hide the attributes of the cart"
-      },
-      {
-        "component": "boolean",
         "name": "enable-item-quantity-update",
         "label": "Enable Item Quantity Update",
         "description": "Enable the ability to update the quantity of items in the cart"
@@ -247,18 +235,6 @@
         "name": "enable-item-remove",
         "label": "Enable Item Remove",
         "description": "Enable the ability to remove items from the cart"
-      },
-      {
-        "component": "boolean",
-        "name": "enable-estimate-shipping",
-        "label": "Enable Estimate Shipping",
-        "description": "Enable the ability to estimate shipping costs"
-      },
-      {
-        "component": "number",
-        "name": "max-items",
-        "label": "Max Items",
-        "description": "Maximum number of items to display in the cart"
       }
     ]
   },

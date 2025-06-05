@@ -59,6 +59,7 @@
       "button",
       "title",
       "hero",
+      "senddatatocomm",
       "cards",
       "columns",
       "fragment",
@@ -79,6 +80,7 @@
       "fragment",
       "enrichment",
       "product-teaser",
+      "senddatatocomm",
       "product-recommendations",
       "product-list-page"
     ]
@@ -97,6 +99,7 @@
       "enrichment",
       "product-details",
       "product-teaser",
+      "senddatatocomm",
       "product-recommendations"
     ]
   },
@@ -127,6 +130,7 @@
       "fragment",
       "commerce-cart",
       "product-teaser",
+      "senddatatocomm",
       "product-recommendations"
     ]
   },
@@ -149,6 +153,7 @@
       "commerce-order-product-list",
       "commerce-order-returns",
       "product-teaser",
+      "senddatatocomm",
       "product-recommendations"
     ]
   },

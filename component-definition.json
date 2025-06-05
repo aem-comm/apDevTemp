@@ -1,726 +1,852 @@
-{
-  "groups": [
-    {
-      "title": "Default Content",
-      "id": "default",
-      "components": [
-        {
-          "title": "Text",
-          "id": "text",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/text/v1/text",
-                "template": {}
-              }
-            }
+[
+  {
+    "id": "image",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      }
+    ]
+  },
+  {
+    "id": "title",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "titleType",
+        "label": "Title Type",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
           }
-        },
-        {
-          "title": "Send Data To Commerce",
-          "id": "senddatatocomm",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Send Data To Commerce",
-                  "model": "senddatatocomm",
-                  "key-value": true
-                }
-              }
-            }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "senddatatocomm",
+    "fields": [
+      {
+        "component": "text",
+        "name": "firstname",
+        "label": "First Name",
+        "description": "Customer First Name"
+      },
+      {
+        "component": "text",
+        "name": "lastname",
+        "label": "Last Name",
+        "description": "Customer Last Name"
+      },
+      {
+        "component": "text",
+        "name": "email",
+        "label": "Email Address",
+        "description": "Customer Email"
+      },
+      {
+        "component": "password",
+        "name": "password",
+        "label": "Password",
+        "description": "Customer Password"
+      }
+    ]
+  },
+  {
+    "id": "button",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "linkType",
+        "label": "Type",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
           }
-        },
-        {
-          "title": "Title",
-          "id": "title",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/title/v1/title",
-                "template": {
-                  "model": "title"
-                }
-              }
-            }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      {
+        "component": "text",
+        "name": "name",
+        "label": "Section Name",
+        "description": "The label shown for this section in the Content Tree"
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Highlight",
+            "value": "highlight"
           }
-        },
-        {
-          "title": "Image",
-          "id": "image",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/image/v1/image",
-                "template": {}
-              }
-            }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "columns-section",
+    "fields": [
+      {
+        "component": "text",
+        "name": "name",
+        "label": "Section Name",
+        "description": "The label shown for this section in the Content Tree"
+      },
+      {
+        "component": "text",
+        "name": "column-width",
+        "label": "Column Width",
+        "value": "50%"
+      },
+      {
+        "component": "select",
+        "name": "gap",
+        "label": "Gap",
+        "options": [
+          {
+            "name": "Big",
+            "value": "Big"
+          },
+          {
+            "name": "Small",
+            "value": "Small"
           }
-        },
-        {
-          "title": "Button",
-          "id": "button",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/button/v1/button",
-                "template": {
-                  "model": "button"
-                }
-              }
-            }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "columns",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "columns",
+        "value": "",
+        "label": "Columns"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "rows",
+        "value": "",
+        "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "commerce-account-header",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Account Header",
+        "value": "My Account"
+      }
+    ]
+  },
+  {
+    "id": "commerce-addresses",
+    "fields": [
+      {
+        "component": "boolean",
+        "name": "minified-view",
+        "label": "Minified View",
+        "value": false
+      }
+    ]
+  },
+  {
+    "id": "commerce-cart",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "start-shopping-url",
+        "label": "Start Shopping URL",
+        "description": "Link to the start shopping page"
+      },
+      {
+        "component": "aem-content",
+        "name": "checkout-url",
+        "label": "Checkout URL",
+        "description": "Link to Checkout page"
+      },
+      {
+        "component": "boolean",
+        "name": "hide-heading",
+        "label": "Hide Heading",
+        "description": "Hide the heading of the cart"
+      },
+      {
+        "component": "boolean",
+        "name": "hide-attributes",
+        "label": "Hide Attributes",
+        "description": "Hide the attributes of the cart"
+      },
+      {
+        "component": "boolean",
+        "name": "enable-item-quantity-update",
+        "label": "Enable Item Quantity Update",
+        "description": "Enable the ability to update the quantity of items in the cart"
+      },
+      {
+        "component": "boolean",
+        "name": "enable-item-remove",
+        "label": "Enable Item Remove",
+        "description": "Enable the ability to remove items from the cart"
+      },
+      {
+        "component": "boolean",
+        "name": "enable-estimate-shipping",
+        "label": "Enable Estimate Shipping",
+        "description": "Enable the ability to estimate shipping costs"
+      },
+      {
+        "component": "number",
+        "name": "max-items",
+        "label": "Max Items",
+        "description": "Maximum number of items to display in the cart"
+      }
+    ]
+  },
+  {
+    "id": "commerce-mini-cart",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "start-shopping-url",
+        "label": "Start Shopping URL",
+        "description": "Link to the start shopping page"
+      },
+      {
+        "component": "aem-content",
+        "name": "cart-url",
+        "label": "Cart URL",
+        "description": "Link to full shopping Cart"
+      },
+      {
+        "component": "aem-content",
+        "name": "checkout-url",
+        "label": "Checkout URL",
+        "description": "Link to Checkout page"
+      }
+    ]
+  },
+  {
+    "id": "commerce-orders-list",
+    "fields": [
+      {
+        "component": "boolean",
+        "name": "minified-view",
+        "label": "Minified View",
+        "value": false
+      }
+    ]
+  },
+  {
+    "id": "commerce-returns-list",
+    "fields": [
+      {
+        "component": "boolean",
+        "name": "minified-view",
+        "label": "Minified View",
+        "value": false
+      }
+    ]
+  },
+  {
+    "id": "content-fragment-offer",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "path",
+        "value": "",
+        "label": "Content Fragment path",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "variation",
+        "value": "",
+        "label": "Variation",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default",
+            "value": "master"
+          },
+          {
+            "name": "Variation 1",
+            "value": "Variation 1"
           }
-        }
-      ]
-    },
-    {
-      "title": "Sections",
-      "id": "sections",
-      "components": [
-        {
-          "title": "Section",
-          "id": "section",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/section/v1/section",
-                "template": {
-                  "model": "section",
-                  "filter": "section"
-                }
-              }
-            }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "enrichment",
+    "fields": [
+      {
+        "component": "select",
+        "name": "type",
+        "label": "Type",
+        "description": "What enrichment type to match with",
+        "options": [
+          {
+            "name": "Product",
+            "value": "product"
+          },
+          {
+            "name": "Category",
+            "value": "category"
           }
-        },
-        {
-          "title": "Columns Section",
-          "id": "columns-section",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/section/v1/section",
-                "template": {
-                  "model": "columns-section",
-                  "filter": "account-section"
-                }
-              }
-            }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "position",
+        "label": "Position",
+        "description": "Position to match with",
+        "options": [
+          {
+            "name": "Below Product",
+            "value": "below-product"
+          },
+          {
+            "name": "Above Product",
+            "value": "above-product"
+          },
+          {
+            "name": "Below Category",
+            "value": "below-category"
+          },
+          {
+            "name": "Above Category",
+            "value": "above-category"
           }
-        }
-      ]
-    },
-    {
-      "title": "Blocks",
-      "id": "blocks",
-      "components": [
-        {
-          "title": "Cards",
-          "id": "cards",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Cards",
-                  "filter": "cards"
-                }
-              }
-            }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fragment",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "hero",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "product-details",
+    "fields": []
+  },
+  {
+    "id": "product-list-page",
+    "fields": [
+      {
+        "component": "number",
+        "name": "category",
+        "label": "Category",
+        "valueType": "number",
+        "value": 4,
+        "description": "Current Category ID"
+      },
+      {
+        "component": "text",
+        "name": "urlPath",
+        "label": "URL Path",
+        "valueType": "string",
+        "value": "gear",
+        "description": "Current Category URL Path"
+      },
+      {
+        "component": "multiselect",
+        "name": "type",
+        "label": "Type",
+        "options": [
+          {
+            "name": "None",
+            "value": ""
+          },
+          {
+            "name": "Search",
+            "value": "search"
           }
-        },
-        {
-          "title": "Card",
-          "id": "card",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Card",
-                  "model": "card"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Columns",
-          "id": "columns",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/columns/v1/columns",
-                "template": {
-                  "columns": "2",
-                  "rows": "1"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Fragment",
-          "id": "fragment",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Fragment",
-                  "model": "fragment"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Hero",
-          "id": "hero",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Hero",
-                  "model": "hero"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Content Fragment",
-          "id": "content-fragment-offer",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Content Fragment",
-                  "model": "content-fragment-offer"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "title": "Product",
-      "id": "product",
-      "components": [
-        {
-          "title": "Product Details",
-          "id": "product-details",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Product Details",
-                  "model": "product-details",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Product List Page",
-          "id": "product-list-page",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Product List Page",
-                  "model": "product-list-page",
-                  "key-value": true,
-                  "urlPath": "gear",
-                  "category": 4,
-                  "type": ""
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Product Recommendations",
-          "id": "product-recommendations",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Product Recommendations",
-                  "model": "product-recommendations",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Product Teaser",
-          "id": "product-teaser",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Product Teaser",
-                  "model": "product-teaser",
-                  "key-value": true,
-                  "details-button": true,
-                  "cart-button": true,
-                  "sku": "nora-practice-tank/WT03"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Enrichment",
-          "id": "enrichment",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Enrichment",
-                  "model": "enrichment",
-                  "key-value": true,
-                  "position": "below-product",
-                  "type": "product"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "title": "Cart",
-      "id": "cart",
-      "components": [
-        {
-          "title": "Mini Cart",
-          "id": "commerce-mini-cart",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "commerce-mini-cart",
-                  "model": "commerce-mini-cart",
-                  "key-value": true,
-                  "start-shopping-url": "/content/xwalk-commerce",
-                  "cart-url": "/content/xwalk-commerce/cart",
-                  "checkout-url": "content/xwalk-commerce/checkout"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Cart",
-          "id": "commerce-cart",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "commerce-cart",
-                  "model": "commerce-cart",
-                  "key-value": true,
-                  "start-shopping-url": "/content/xwalk-commerce",
-                  "checkout-url": "/content/xwalk-commerce/checkout",
-                  "hide-heading": false,
-                  "hide-attributes": false,
-                  "enable-item-quantity-update": true,
-                  "enable-item-remove": true,
-                  "enable-estimate-shipping": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Checkout",
-          "id": "commerce-checkout",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "commerce-checkout",
-                  "model": "commerce-checkout",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "title": "Order",
-      "id": "order",
-      "components": [
-        {
-          "title": "Cost Summary",
-          "id": "commerce-order-cost-summary",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Order Cost Summary",
-                  "model": "commerce-order-cost-summary",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Header",
-          "id": "commerce-order-header",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Order Header",
-                  "model": "commerce-order-header",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Product List",
-          "id": "commerce-order-product-list",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Order Product List",
-                  "model": "commerce-order-product-list",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Returns",
-          "id": "commerce-order-returns",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Order Returns",
-                  "model": "commerce-order-returns",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Order Status",
-          "id": "commerce-order-status",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Order Status",
-                  "model": "commerce-order-status",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Shipping Status",
-          "id": "commerce-shipping-status",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Shipping Status",
-                  "model": "commerce-shipping-status",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Customer Details",
-          "id": "commerce-customer-details",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Customer Details",
-                  "model": "commerce-customer-details",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Search Order",
-          "id": "commerce-search-order",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Search Order",
-                  "model": "commerce-search-order",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "title": "Account",
-      "id": "account",
-      "components": [
-        {
-          "title": "Login",
-          "id": "commerce-login",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Login",
-                  "model": "commerce-login",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Forgot Password",
-          "id": "commerce-forgot-password",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Forgot Password",
-                  "model": "commerce-forgot-password",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Create Account",
-          "id": "commerce-create-account",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Create Account",
-                  "model": "commerce-create-account",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Account Sidebar",
-          "id": "commerce-account-sidebar",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Account Sidebar",
-                  "model": "commerce-account-sidebar",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Account Header",
-          "id": "commerce-account-header",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Account Header",
-                  "model": "commerce-account-header",
-                  "key-value": true,
-                  "title": "My Account"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Orders List",
-          "id": "commerce-orders-list",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Orders List",
-                  "model": "commerce-orders-list",
-                  "key-value": true,
-                  "minified-view": false
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Addresses",
-          "id": "commerce-addresses",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Addresses",
-                  "model": "commerce-addresses",
-                  "key-value": true,
-                  "minified-view": false
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Customer Information",
-          "id": "commerce-customer-information",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Customer Information",
-                  "model": "commerce-customer-information",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Returns List",
-          "id": "commerce-returns-list",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Returns List",
-                  "model": "commerce-returns-list",
-                  "key-value": true,
-                  "minified-view": false
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Create Password",
-          "id": "commerce-create-password",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Create Password",
-                  "model": "commerce-create-password",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Confirm Account",
-          "id": "commerce-confirm-account",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Confirm Account",
-                  "model": "commerce-confirm-account",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "title": "Return",
-      "id": "return",
-      "components": [
-        {
-          "title": "Return Header",
-          "id": "commerce-return-header",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Return Header",
-                  "model": "commerce-return-header",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Create Return",
-          "id": "commerce-create-return",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Commerce Create return",
-                  "model": "commerce-create-return",
-                  "key-value": true
-                }
-              }
-            }
-          }
-        }
-      ]
-    }
-  ]
-}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "product-recommendations",
+    "fields": [
+      {
+        "component": "text",
+        "name": "typeId",
+        "label": "Type ID",
+        "description": "Type ID"
+      }
+    ]
+  },
+  {
+    "id": "product-teaser",
+    "fields": [
+      {
+        "component": "text",
+        "name": "sku",
+        "label": "SKU",
+        "valueType": "string",
+        "value": "",
+        "description": "SKU to display"
+      },
+      {
+        "component": "boolean",
+        "name": "details-button",
+        "label": "Show Details Button",
+        "valueType": "boolean"
+      },
+      {
+        "component": "boolean",
+        "name": "cart-button",
+        "label": "Show Cart Button",
+        "valueType": "boolean"
+      }
+    ]
+  },
+  {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "enrichment-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "enrichment",
+        "readOnly": true
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string",
+        "value": "",
+        "description": "Title of the enrichment"
+      },
+      {
+        "component": "text",
+        "name": "enrichment-products",
+        "label": "Product SKU's to match with",
+        "valueType": "string",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "name": "enrichment-categories",
+        "label": "Product Categories to match with",
+        "valueType": "string",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "name": "enrichment-positions",
+        "label": "Positions to match with",
+        "valueType": "string",
+        "multi": true
+      }
+    ]
+  },
+  {
+    "id": "pdp-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "pdp",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "order-details-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "order-details",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "plp-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "plp",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "cart-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "cart",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "mini-cart-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "mini-cart",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "checkout-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "checkout",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "search-order-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "search-order",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "search-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "search",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "login-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "login",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "forgot-password-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "forgot-password",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "create-account-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "create-account",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "account-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "account",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "orders-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "orders",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "address-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "address",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "returns-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "returns",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "account-order-details-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "account-order-details",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "order-status-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "order-status",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "return-details-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "return-details",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "create-return-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "create-return",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "confirm-account-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "confirm-account",
+        "readOnly": true
+      }
+    ]
+  },
+  {
+    "id": "create-password-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "template",
+        "label": "Template",
+        "valueType": "string",
+        "value": "create-password",
+        "readOnly": true
+      }
+    ]
+  }
+]

@@ -1,13 +1,13 @@
 {
   "mappings": [
-    "/content/auspostDemo/:/",
-    "/content/auspostDemo/configuration:/.helix/config.json",
-    "/content/auspostDemo/headers:/.helix/headers.json",
-    "/content/auspostDemo/metadata:/metadata.json",
-    "/content/auspostDemo/placeholders:/placeholders.json",
-    "/content/auspostDemo.resource/enrichment/enrichment.json:/enrichment/enrichment.json"
+    "/content/AuspostPOC/:/",
+    "/content/AuspostPOC/configuration:/.helix/config.json",
+    "/content/AuspostPOC/headers:/.helix/headers.json",
+    "/content/AuspostPOC/metadata:/metadata.json",
+    "/content/AuspostPOC/placeholders:/placeholders.json",
+    "/content/AuspostPOC.resource/enrichment/enrichment.json:/enrichment/enrichment.json"
   ],
   "includes": [
-    "/content/auspostDemo/"
+    "/content/AuspostPOC/"
   ]
 }
